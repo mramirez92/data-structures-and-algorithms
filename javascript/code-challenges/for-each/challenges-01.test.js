@@ -11,7 +11,7 @@ const addOne = (arr) => {
   let newArr=[];
   arr.forEach(element => newArr.push(element+1));
   return newArr;
-}
+};
 // Solution code here...
 
 
@@ -85,17 +85,19 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
- arr.push(value);
+  arr.push(value);
 
 
   // Solution code here...
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  push(callback(element))*(times);
-
-  // Solution code here...
+  for (let i=0; i<times; i++){
+    callback(arr,num);
+  }
+  return arr;
 };
+// Solution code here...
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -117,7 +119,15 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  let newArr = [];
+  availableItems.forEach(element => {
+    if (element.available === true){
+      newArr.push(element.name);
+    }
+  });
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
