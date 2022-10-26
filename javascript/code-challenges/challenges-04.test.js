@@ -185,6 +185,15 @@ const meetings = [
 
 const sortMeetingsByDay = (arr) => {
   // Solution code here...
+  let daysOfWeek={
+    Monday:0,
+    Tuesday:1,
+    Wednesday:2,
+    Thursday:3,
+    Friday:4,
+  };
+  // brackets are used because those variables are changing as it goes through the array because its sorting if we us ' daysOfWeek.a.dayOfWeek' its going to assume that we are sorting through a variable of daysOfWeek
+  return arr.sort((a,b) => daysOfWeek[a.dayOfWeek] - daysOfWeek[b.dayOfWeek]);
 };
 
 /* ------------------------------------------------------------------------------------------------

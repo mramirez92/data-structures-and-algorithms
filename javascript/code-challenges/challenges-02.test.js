@@ -80,7 +80,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => arr.map(element => Math.pow(2,element));
-  // Solution code here...
+// Solution code here...
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
