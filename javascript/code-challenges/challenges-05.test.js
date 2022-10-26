@@ -147,7 +147,14 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 const reversedString = (str) => {
   return str.split('').reduce((last,letter)=> letter+last, '');
   // Solution code here...
-};
+
+//   let splitStr =str.split('');
+//        ['c','a','t']
+//   let reversedStr =splitStr.reduce((bucket, currentLetter) =>{
+  //      
+  // return currentLetter+accumulator;},'');
+//
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
