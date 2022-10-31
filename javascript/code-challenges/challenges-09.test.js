@@ -9,7 +9,7 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => arr.reduce((acc, num) => acc < num ? num : acc);
-  // Solution code here...
+// Solution code here...
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -19,13 +19,14 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
 const getCourseKeys = (obj) => Object.keys(obj);
-  // Solution code here...
+// Solution code here...
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,11 +122,11 @@ const characters = [
 
 const getHouses = (arr) => {
 
-    let houses = [];
+  let houses = [];
 
-    arr.forEach(char => houses.push(char.house));
-    return houses;
-  };
+  arr.forEach(char => houses.push(char.house));
+  return houses;
+};
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -140,12 +141,20 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
+  let children = 0;
+  // look at every element
+  arr.forEach(person => {
+    if (person.name === character) {
+      Object.keys(person).forEach((key, index) => {
+        if (key === 'children') {
+          children = Object.values(person)[index].length;
+        }
+      });
 
-  let person = {};
+    }
+  });
 
-  arr.forEach((house) => character === house.name ? person = house : false);
-  return 'children' in person;
-
+  return children ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
