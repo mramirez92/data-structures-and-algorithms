@@ -118,28 +118,7 @@ CHALLENGE 6
 
 Write a function named howManyTreats that will return the quantity of treats you need to pick up from the pet store today from this array. The structure of the array will not change.
 ------------------------------------------------------------------------------------------------ */
-
-const errands = [
-  {
-    store: 'Grocery store',
-    items: [{ name: 'Eggs', quantity: 12 }, { name: 'Milk', quantity: 1 }, { name: 'Apples', quantity: 3 }]
-  },
-  {
-    store: 'Drug store',
-    items: [{ name: 'Toothpaste', quantity: 1 }, { name: 'Toothbrush', quantity: 3 }, { name: 'Mouthwash', quantity: 1 }]
-  },
-  {
-    store: 'Pet store',
-    items: [{ name: 'Cans of food', quantity: 8 }, { name: 'Treats', quantity: 24 }, { name: 'Leash', quantity: 1 }]
-  }
-];
-
-const howManyTreats = (arr) =>{
-  return arr[2].items[1].quantity;};
-
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 7 - Stretch Goal
-
++
 Write a function named battleship that accepts a 2D array and two numbers: a row coordinate and a column coordinate.
 
 Return "hit" or "miss" depending on if there's part of a boat at that position in the array. Assume the array has only one of two values at each index. '#' for part of a boat, or ' ' for open water.
