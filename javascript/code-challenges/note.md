@@ -39,3 +39,33 @@
 11. What status code does a successful DELETE request return?
 
     - 204
+
+---------
+
+1. Status Codes
+    - 100s= informational codes that tell us (the client) teh header part of the request went through, server will try to transmit.
+    - 200’s = SUCCESS...sort of!!! Request was accepted. With async (202) the request was not fully processed, but the request met the validation requirements.
+    - 300’s = Redirection codes when resource we request aren't available at the location we're searching in.
+    - 400’s = CLIENT ERROR codes for invalid requests. EX: incorrect client input, timeouts etc
+    - 500’s = SERVER ERROR codes, can happen when server is ovewhelmed with requests or server is down.
+
+2. 202 = Request accepted, but still processing. Used by async processing.
+
+3. 308 = Permanent redirect, a new url is used to accessed the resource for a more direct route.
+
+4. 204 (no content) is used if an update didn’t return data to a client
+
+5. 410 (gone) is used if a resource used to exist but no longer does
+
+6. ‘Forbidden’ status code = 403
+
+Why do we need to pull our MongoDB database string out of our server and put it into our .env?
+What is middleware?
+What does app.use(express.json()) do?
+What does the /:id mean in a route?
+What is the difference between PUT and PATCH?
+How do you make a default value in a schema?
+7. 500 = Server error, request was not completed by server. 
+8. 200 request was received and processed, 201 request was successful and CREATED.
+
+
