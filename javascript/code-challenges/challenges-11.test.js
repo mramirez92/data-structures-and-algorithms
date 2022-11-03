@@ -70,9 +70,14 @@ This function should then raise 2 to the power of the resulting numbers, returni
 
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
+// 2 is my base, raised to thw power of input Math.pow(2, input)
 
 const divisibleByFiveTwoToThePower = (input) => {
-  return input.map(element => element.filter(num => typeof num === 'number' ? num % 5 === 0: false)).map(element => element.map(num => Math.pow(2,num)));
+  return input.map(nestArr =>{
+    // filter = if all of these condiditon are met do the next part
+    return nestArr.filter(element => element % 5 === 0 && typeof element === 'number')
+    .map(filteredElem => (2**filteredElem));
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -139,6 +144,7 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   return data.filter(character => character.gender === 'male' || character.gender === 'female' ? character.name : false).map(character => character.name).join(' and ');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
