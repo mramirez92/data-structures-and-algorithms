@@ -19,9 +19,8 @@ Becomes:
 ------------------------------------------------------------------------------------------------ */
 
 function transformToLis(obj){
-let array= Object.entries(obj);
-
-return array.map(pair => `<li>+${pair.join(': ')}</li>`);
+  let arr = Object.entries(obj);
+  return arr.map(person => `<li>${person.join(': ')}</li>`);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,9 +53,11 @@ You may want to use filter, map, or reduce for this problem, but are not require
 For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
-const totalSum = (input) => {
-  // Solution code here...
-};
+const totalSum = (input) => input.flat().reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    0
+  );
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -142,7 +143,8 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here... filter for gender. if its strictly equals grab those names map to pull out names, use join or reduce
+  return data.filter(character => character.gender === 'male' || character.gender === 'female' ? character.name : false).map(character => character.name).join(' and ');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
