@@ -45,10 +45,7 @@ Write a function named standardizePhoneNumbers that takes in an array of phone n
 For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
-const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
-  return arr.filter(str => str.match((/(\d+)/g)));
-};
+const standardizePhoneNumbers = (arr) => arr.map(str => str.substring(1,4)+str.substring(6,9)+str.substring(10));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -59,7 +56,15 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-c
+  let arr = str.split('');
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 !== 0) {
+      newArr.push(arr[i]);
+
+    }
+  }
+  return newArr.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
