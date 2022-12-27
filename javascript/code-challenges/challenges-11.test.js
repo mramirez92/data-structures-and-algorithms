@@ -18,7 +18,7 @@ Becomes:
 ]
 ------------------------------------------------------------------------------------------------ */
 
-ffunction transformToLis(obj){
+function transformToLis(obj){
 return Object.entries(obj).map(pair => `<li>${pair.join(': ')}</li>`);
 };
 
