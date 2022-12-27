@@ -143,10 +143,21 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-const fizzbuzz = (arr) => {
-  // Solution code here...
+const fizzbuzz =(arr)=>{
+  let newArr = [];
+  arr.forEach(num =>{
+    if (num %3 === 0 && num%5===0){
+      newArr.push('FizzBuzz');
+    }else if (num%3 === 0){
+      newArr.push('Fizz');
+    }else if (num% 5===0){
+      newArr.push('Buzz');
+    }else{
+      newArr.push(num);
+    }
+  });
+  return newArr;
 };
-
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
