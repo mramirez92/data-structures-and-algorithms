@@ -4,6 +4,10 @@ class Node:
         self.next = next
 
 
+class TargetError:
+    pass
+
+
 class LinkedList:
     # instantiates linked list, starts empty, includes HEAD
     def __init__(self):
@@ -38,7 +42,7 @@ class LinkedList:
         string = ""
         current_node = self.head
         """
-        while curent head is not None, format the current node value and add it to our string variable.
+        while current head is not None, format the current node value and add it to our string variable.
         string variable will expand as function iterates through linked list
         """
         while current_node is not None:
@@ -48,9 +52,34 @@ class LinkedList:
         string += "NULL"
         return string
 
+    def append(self, value):
 
-# TA's i dont quite understand what this is for
-class TargetError:
-    pass
+        current_node = self.head
+        end_node = Node(value)
 
+        if current_node is None:
+            self.head = end_node
+            return
+        else:
+            current_node = self.head
+            while current_node.next:
+                current_node = current_node.next
+            current_node.next = end_node
+
+    def insert_after(self, value, new_value):
+
+        current_node = self.head
+        new_insert = Node(new_value)
+
+        if self.head is None:
+            raise TargetError()
+        while current_node:
+            if current_node.value == value:
+                new_insert.next = current_node.next
+                current_node.next = new_insert
+            else:
+                current_node = current_node.next
+
+
+# TA's I don't quite understand what this is for
 
