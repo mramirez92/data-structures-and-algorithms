@@ -2,7 +2,7 @@
 
 ## Author: Monica Ramirez
 
-![ ](./linked_list_insertions/code challenge6.jpg)
+![ ](codechallenge6.png)
 
 Setup
 vevn to run test using pytest or pytest-watch
