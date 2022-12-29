@@ -1,10 +1,13 @@
+# Node class that is used to instantiate new node
+
 class Node:
-    def __init__(self, value, next=None):
+    def __init__(self, value, next_=None):
         self.value = value
-        self.next = next
+        self.next = next_
+    # using underscore because next exists as a built in method
 
 
-class TargetError:
+class TargetError(Exception):
     pass
 
 
@@ -17,11 +20,11 @@ class LinkedList:
         # new node instantiates new Node by calling Node method
         new_node = Node(value)
 
-        # assign new_node's next as acting HEAD
-        new_node.next = self.head
-
         # assign HEAD to new_node, shifts new node to HEAD of linked list
         self.head = new_node
+
+        # assign new_node's next as acting HEAD, the nodes current head before addition, whatever the head was right before new assignment happens
+        new_node.next = self.head
 
     def includes(self, value):
         # makes current node HEAD
@@ -78,8 +81,50 @@ class LinkedList:
                 new_insert.next = current_node.next
                 current_node.next = new_insert
             else:
+                # if search value doesnt match current value, traverse list
                 current_node = current_node.next
 
+    def insert_before(self, value, new_value):
+
+        new_node = Node(new_value)
+        if self.head is None:
+            self.head = new_node
+            return
+
+        if self.head.data == value:
+            new_node.next = self.head
+            self.head = new_node
+            return
+
+        current = self.head
+        while current.next is not None:
+            if current.next.value == new_value:
+                new_node.next = current.next
+                current.next = new_node
+                return
+            current = current.next
+
+    def kth_from_end(self, k):
+        length = 0
+        current_node = self.head
+
+        # traverses list to find length while true
+
+        while current_node:
+            length += 1
+            current_node = current_node.next
+
+        # minus one at the end, k = 3 in a list of 5 elements returns len of 2, its index is at 1, so we need to subtract 1 from len fucntion to get correct index
+
+        position = length - k - 1
+        # resetting current to head
+
+        if k == 0:
+            return self.head.value
+
+        current_node = self.head
+        for i in range(position):
+            current_node = current_node.next
+        return current_node.value
 
 # TA's I don't quite understand what this is for
-
