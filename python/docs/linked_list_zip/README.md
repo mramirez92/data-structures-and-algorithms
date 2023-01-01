@@ -3,7 +3,7 @@ Merge two singly linked list and return a reference to the linked list
 
 ## Whiteboard Process
 
-![Whiteboard](/ziplist.jpg)
+![Whiteboard](ziplist.jpg)
 
 
 ## Approach & Efficiency
