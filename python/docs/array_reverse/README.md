@@ -4,7 +4,7 @@ Write a function called reverseArray which takes an list as an argument. Without
 
 ## Whiteboard Process
 
-![Whiteboard](/array_reverse.jpg)
+![Whiteboard](array_reverse.jpg)
 
 
 ## Approach & Efficiency
