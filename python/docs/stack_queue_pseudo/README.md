@@ -11,7 +11,7 @@ PseudoQueue class will implement our standard queue interface (the two methods l
     - Extracts a value from the PseudoQueue, using a first-in, first-out approach.
 
 ## Whiteboard Process
-![ ](Untitled(1).jpg)
+![](stackq.jpg)
 
 ## Approach & Efficiency
 Because we are using stack methods to create a queue (front and rear) our method needs to be able to instantiate new nodes and push them to the bottom of stack. We do this by creating a temporary holding stack. Nodes are popped off our original stack and pushed to this temporary stack. 
