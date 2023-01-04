@@ -81,3 +81,13 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 |------------------------------------------------------------|
 | [1. array_reverse](docs/array_reverse/README.md)           |
 | [2. array-insert-shift](docs/array_insert_shift/README.md) |
+|[3.]()|
+|[4. ]()|
+|[5.]()|
+|[6.](docs/linked_list_insertions/README.md)|
+|[7.](docs/)|
+|[8.]()|
+|[9.]()|
+|[10.](docs/stack_and_queue/README.md)|
+|[11.](docs/stack_and_queue_pseudo/README.md)|
+|[12.](docs/stacks_and_queue_animal_shelter/README.md)|
