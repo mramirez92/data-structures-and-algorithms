@@ -1,11 +1,11 @@
+class TargetError(Exception):
+    pass
+
+
 class Node:
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
-
-
-class TargetError:
-    pass
 
 
 class LinkedList:
@@ -14,20 +14,8 @@ class LinkedList:
         self.head = None
 
     def insert(self, value):
-        # new node instantiates new Node by calling Node method
         new_node = Node(value)
-
-<<<<<<< Updated upstream
-        # assign new_node's next as acting HEAD
         new_node.next = self.head
-
-        # assign HEAD to new_node, shifts new node to HEAD of linked list
-=======
-        # assign new_node's next as acting HEAD, the nodes current head before addition, whatever the head was right before new assignment happens
-        new_node.next = self.head
-        # assign HEAD to new_node, shifts new node to HEAD of linked list
-
->>>>>>> Stashed changes
         self.head = new_node
 
     def includes(self, value):
@@ -89,11 +77,6 @@ class LinkedList:
             else:
                 current_node = current_node.next
 
-<<<<<<< Updated upstream
-
-# TA's I don't quite understand what this is for
-
-=======
     def insert_before(self, value, new_value):
 
         if self.head is None:
@@ -140,4 +123,3 @@ class LinkedList:
     #         for i in range(position - 1):
     #             current_node = current_node.next
     #         return current_node.value
->>>>>>> Stashed changes
