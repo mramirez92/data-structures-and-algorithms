@@ -81,7 +81,7 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 |------------------------------------------------------------|
 | [1. array_reverse](docs/array_reverse/README.md)           |
 | [2. array-insert-shift](docs/array_insert_shift/README.md) |
-|[3.]()|
+|[3.array-binary-search](https://github.com/mramirez92/data-structures-and-algorithms/blob/main/python/docs/array_binary_search/README.md)|
 |[4. ]()|
 |[5.]()|
 |[6. linked list insertions](docs/linked_list_insertions/README.md)|
