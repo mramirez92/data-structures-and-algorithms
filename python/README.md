@@ -91,3 +91,4 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
 |[10.stack and queue](docs/stack_and_queue/README.md)|
 |[11.stack and queue pseudo](docs/stack_and_queue_pseudo/README.md)|
 |[12.stacks and queue animal shelter](docs/stack_and_queue_animal_shelter/README.md)|
+|[15. Trees](https://github.com/mramirez92/data-structures-and-algorithms/tree/main/python/docs/trees)|
