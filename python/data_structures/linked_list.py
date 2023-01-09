@@ -98,28 +98,36 @@ class LinkedList:
                 else:
                     current = current.next
 
-    # def kth_from_end(self, k):
-    #     length = 0
-    #     current_node = self.head
-    #
-    #     # traverses list to find length while true
-    #
-    #     while current_node is not None:
-    #         length += 1
-    #         current_node = current_node.next
-    #
-    #         position = length - k
-    #
-    #         if k >= length:
-    #             raise TargetError("Value exceeds linked list length")
-    #
-    #         if k < 0:
-    #             raise TargetError("Value too low")
-    #
-    #         if position == 0:
-    #             return self.head.value
-    #         current_node = self.head
-    #     # iterate to the node at the calculated position and return its value
-    #         for i in range(position - 1):
-    #             current_node = current_node.next
-    #         return current_node.value
+    def kth_from_end(self, n):
+        length = 0
+        current_node = self.head
+
+        # traverses list to find length while true
+
+        while current_node is not None:
+            length = 0
+            curr = self.head
+            while curr is not None:
+                length += 1
+                curr = curr.next
+
+            # Calculate the position of the node to remove
+            pos = length - n
+
+            # Check if the position is valid
+            if pos < 0:
+                return
+
+            # Traverse the list and remove the node
+            prev = None
+            curr = self.head
+            for i in range(pos):
+                prev = curr
+                curr = curr.next
+            prev.next = curr.next
+
+
+
+
+
+
