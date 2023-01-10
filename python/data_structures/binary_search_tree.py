@@ -15,18 +15,20 @@ class BinarySearchTree(BinaryTree):
             return
 
         current = self.root
+        #iterative because we are using a while loop
+        # recursive when function calls itself
         while current:
             if current.value == value:
                 return
             # if value is less than current value, add left if left is None
-            # else move left
             if value < current.value:
+                # add current if there is an empty space available, fill space
                 if current.left is None:
                     current.left = Node(value)
                 else:
+                    #if no space, continue left
                     current = current.left
             # if value is greater than current value, add right if none
-            # else move to the right
             if value > current.value:
                 if current.right is None:
                     current.right = Node(value)
@@ -50,3 +52,5 @@ class BinarySearchTree(BinaryTree):
             if value > current.value:
                 current = current.right
         return False
+
+

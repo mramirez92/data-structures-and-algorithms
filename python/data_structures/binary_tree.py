@@ -66,6 +66,11 @@ class BinaryTree:
 
         return nodes
 
+    def find_maximum_value(self):
+        if self.root is None:
+            return None
+        return max(self.post_order())
+
 
 class Node:
     def __init__(self, value):

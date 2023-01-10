@@ -103,31 +103,23 @@ class LinkedList:
         current_node = self.head
 
         # traverses list to find length while true
+        while current_node:
+            length += 1
+            current_node = current_node.next
 
-        while current_node is not None:
-            length = 0
-            curr = self.head
-            while curr is not None:
-                length += 1
-                curr = curr.next
+        # Calculate the position of the node to remove
+        pos = length - n
+        # check if position in valid
+        if n >= length:
+            raise TargetError(Exception)
+        if n < 0:
+            raise TargetError(Exception)
 
-            # Calculate the position of the node to remove
-            pos = length - n
+        if pos == 0:
+            return self.head.value
 
-            # Check if the position is valid
-            if pos < 0:
-                return
-
-            # Traverse the list and remove the node
-            prev = None
-            curr = self.head
-            for i in range(pos):
-                prev = curr
-                curr = curr.next
-            prev.next = curr.next
-
-
-
-
-
-
+        # Traverse the list and remove the node
+        current_node = self.head
+        for i in range(pos - 1):
+            current_node = current_node.next
+        return current_node.value
