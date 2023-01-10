@@ -13,7 +13,7 @@ Extending the implementation of Binary Tree class with an addition of find_maxim
 
 ## Whiteboard
 
-[](treemax.jpg)
+[](/treemax.jpg)
 
 ## Approach & Efficiency
 
