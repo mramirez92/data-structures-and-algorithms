@@ -74,6 +74,6 @@ The length of our list is 6, which is greater than one. Our list will be divided
 ![Sorting Iterations](sortingiterations.jpg)
 ![More Sorting](finalsort.jpg)
 
-And thats it our returned list should look like this `[4, 8, 15, 16, 23, 42]`.
+And that's it! Our returned list should look like this: `[4, 8, 15, 16, 23, 42]`.
 
 You can find the code [here](https://github.com/mramirez92/data-structures-and-algorithms/blob/main/python/code_challenges/mergesort.py) and testing files [here](https://github.com/mramirez92/data-structures-and-algorithms/blob/main/python/tests/code_challenges/test_mergesort.py).
