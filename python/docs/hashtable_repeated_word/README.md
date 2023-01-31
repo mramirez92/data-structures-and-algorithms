@@ -11,3 +11,15 @@ Because we have to iterate through our list that stores our split up text, time 
 
 ## Whiteboard
 ![](hash_repeat_word.jpg)
+
+## Solution
+
+Our function takes in a string and returns the first repeated word. In order to iterate through the string we need to split the string into individual words. At the same time we need to remove any punctuation and set our words to lower. This is done with list comprehension storing the words in a list. For speedy lookup we instantiate a hashtable. We begin to iterate through our words list, if a word is not in our hastable it added. If a word exists in our hashtable, the word returned. This returns the first repeadted word and halts any other lookup.
+
+[Solution](https://github.com/mramirez92/data-structures-and-algorithms/blob/main/python/code_challenges/hashtable_repeated_word.py)
+
+## Links and Resources
+[Remove Punctuation](https://datagy.io/python-remove-punctuation-from-string/)
+
+[.translate()](https://docs.python.org/3/library/stdtypes.html?highlight=translate#str.translate)
+
