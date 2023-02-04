@@ -6,7 +6,7 @@ Write a function called tree_intersection that takes two binary trees as paramet
 - use python dictionaries
 
 ## Whiteboard
-![](tree_interect.png)
+![](tree_interction.jpg)
 
 ## Approach & Efficiency
 Both time and space complexity are O(n). The time is takes to traverse each tree is dependent on the amount of nodes it has. When building out each dictionary, space is dependent again on the size of the tree.
