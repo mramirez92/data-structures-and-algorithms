@@ -35,7 +35,7 @@ class BinaryTree:
             nodes = []
 
         nodes.append(root.value)
-
+        
         # left child
         if root.left:
             self.pre_order(root.left, nodes)
