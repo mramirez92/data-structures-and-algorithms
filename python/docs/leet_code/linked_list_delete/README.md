@@ -16,8 +16,8 @@ Since n = 7, node 3 with value 7 is the middle node, which is marked in red.
 We return the new list after removing this node. 
 
 ## Whiteboard
-![](leetcode_ll_delete.)
-![]()
+![Whiteboard](leetcode_ll_delete.jpg)
+![Screenshot](leetcode_ll_delete_ss.png)
 
 ## Approach & Efficiency
 This algorithm runs with a time effiency of O(n) with n representing the nodes. Space is O(1) because no new space is being allocated. 
